@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition template="templates/layout.xhtml">
+		<ui:define name="content">
+			<p>
+				<h:outputText value="Enviando valores para o Maneged Bean:"></h:outputText>
+			</p>
+			<p>
+				<h:outputText value="Sem ajax:"></h:outputText>
+			</p>
+			<p:outputLabel value="Output: #{exemploMB.valor}"></p:outputLabel>
+			<h:form>
+				<p:inputText value="#{exemploMB.valor}"></p:inputText>
+				<p:commandButton value="Enviar" ajax="false"></p:commandButton>
+			</h:form>
+			<p>
+				<h:outputText value="Com ajax:"></h:outputText>
+			</p>
+			<p:outputLabel id="valor" value="Output2: #{exemploMB.valor}"></p:outputLabel>
+			<h:form>
+				<p:inputText value="#{exemploMB.valor}"></p:inputText>
+				<p:commandButton update="valor" value="Enviar" ajax="true"></p:commandButton>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

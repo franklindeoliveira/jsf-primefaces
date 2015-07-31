@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition template="templates/layout.xhtml">
+		<ui:define name="content">
+			<p>
+				<h:outputText value="Componentes do Primefaces:"></h:outputText>
+			</p>
+			<p>
+				<b><h:outputText value="Panel:"></h:outputText></b>
+			</p>
+			<p:panel header="#{compPanelMB.cabecalho}" footer="#{compPanelMB.rodape}">
+				<h:outputText value="#{compPanelMB.conteudo}"></h:outputText>
+			</p:panel>
+			<p>
+				<b><h:outputText value="DataTable:"></h:outputText></b>
+			</p>
+			<p:dataTable var="funcionario" value="#{compDataTableMB.funcionarios}">
+				<p:column headerText="Nome">
+					<h:outputText value="#{funcionario.nome}"></h:outputText>
+				</p:column>
+				<p:column headerText="Cargo">
+					<h:outputText value="${funcionario.cargo}"></h:outputText>
+				</p:column>
+			</p:dataTable>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

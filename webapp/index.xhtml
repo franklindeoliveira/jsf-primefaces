@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition template="templates/layout.xhtml">
+		<ui:define name="content">
+			<p>
+				<h:outputText value="Bem vindo ao JSF!" />
+			</p>
+			<p>
+				<h:outputText value="Componentes do Primefaces: "></h:outputText>
+				<p:link outcome="componentes">IR</p:link>
+			</p>
+			<p>
+				<h:outputText value="Formulário: " />
+				<p:link outcome="formulario">IR</p:link>
+			</p>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
