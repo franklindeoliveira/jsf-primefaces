@@ -10,11 +10,9 @@ public class ExemploMB {
 	private String valor;
 
 	public String getValor() {
-		System.out.println("getValor");
 		return valor;
 	}
 	public void setValor(String valor) {
-		System.out.println("setValor");
 		this.valor = valor;
 	}
 	

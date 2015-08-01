@@ -8,7 +8,10 @@
 	<ui:composition template="templates/layout.xhtml">
 		<ui:define name="content">
 			<p>
-				<h:outputText value="Enviando valores para o Maneged Bean:"></h:outputText>
+				<h:outputText value="Formulário:"></h:outputText>
+			</p>
+			<p>
+				<b><h:outputText value="Enviando valores para o Maneged Bean:"></h:outputText></b>
 			</p>
 			<p>
 				<h:outputText value="Sem ajax:"></h:outputText>
@@ -25,6 +28,18 @@
 			<h:form>
 				<p:inputText value="#{exemploMB.valor}"></p:inputText>
 				<p:commandButton update="valor" value="Enviar" ajax="true"></p:commandButton>
+			</h:form>
+			<p>
+				<b><h:outputText value="Redirecionamento de página com action:"></h:outputText></b>
+			</p>
+			<h:form>
+				<p:commandButton value="Clique aqui!" action="#{commandButtonMB.action}"></p:commandButton>
+			</h:form>
+			<p>
+				<b><h:outputText value="Tratamento de eventos com actionListener:"></h:outputText></b>
+			</p>
+			<h:form>
+				<p:commandButton value="Clique aqui!" actionListener="#{commandButtonMB.actionListener}"></p:commandButton>
 			</h:form>
 		</ui:define>
 	</ui:composition>
